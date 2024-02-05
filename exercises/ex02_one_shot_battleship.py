@@ -1,4 +1,4 @@
-"""EX 02 - One Shot Battleship - A 4 by 4 grid"""
+"""EX 02 - One Shot Battleship - A 4 by 4 grid!"""
 
 __author__ = "730499558"
 grid_size: int = 4
@@ -11,11 +11,11 @@ result: str = ""
 row_count: int = 1
 # Making a guess
 boat_row: int = int(input("Guess a row: "))
-while boat_row > grid_size:
+while (boat_row > grid_size) or (boat_row < 1):
     new_row_guess: int = int(input(f"The grid is only {grid_size} by {grid_size}. Try again: "))
     boat_row = new_row_guess
 boat_col: int = int(input("Guess a column: "))
-while boat_col > grid_size:
+while (boat_col > grid_size) or (boat_col < 1):
     new_col_guess: int = int(input(f"The grid is only {grid_size} by {grid_size}. Try again: "))
     boat_col = new_col_guess
 # Determining if it hit
