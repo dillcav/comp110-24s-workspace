@@ -58,7 +58,8 @@ def alphabetizer(input: list[str]) -> dict[str, list[str]]:
 def update_attendance(input: dict[str, list[str]], day: str, name: str) -> None:
     """Add names to the attendance sheet!"""
     if day in input:
-        input[day].append(name)
+        if name not in input[day]:
+            input[day].append(name)
     else:
         step: list[str] = list()
         input[day] = step
