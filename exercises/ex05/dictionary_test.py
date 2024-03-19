@@ -27,7 +27,7 @@ def test_invert_use2() -> None:
 
 def test_invert_edge() -> None:
     """Submitting a dict that already has identical keys!"""
-    test: dict[str,str] = {"A": "1", "A": "1"}
+    test: dict[str, str] = {"A": "1", "A": "1"}
     assert invert(test) == {"2": "A"}
 
 
@@ -51,19 +51,19 @@ def test_count_edge() -> None:
 
 def test_fav_color_use1() -> None:
     """Inputting a list with a majority color!"""
-    test: dict[str,str] = {"A": "Yellow", "B": "Yellow", "C": "Green"}
+    test: dict[str, str] = {"A": "Yellow", "B": "Yellow", "C": "Green"}
     assert favorite_color(test) == "Yellow"
 
 
 def test_fav_color_use2() -> None:
     """Inputting a list with a tied color!"""
-    test: dict[str,str] = {"A": "Yellow", "B": "Blue", "C": "Green"}
+    test: dict[str, str] = {"A": "Yellow", "B": "Blue", "C": "Green"}
     assert favorite_color(test) == "Yellow"
 
 
 def test_fav_color_edge() -> None:
     """Inputting a list with someone voting twice!"""
-    test: dict[str,str] = {"A": "Yellow", "A": "Yellow", "B": "Green", "C": "Green"}
+    test: dict[str, str] = {"A": "Yellow", "A": "Yellow", "B": "Green", "C": "Green"}
     assert favorite_color(test) == "Green"
 
 
